@@ -1,0 +1,30 @@
+﻿<Window x:Class="OptionalWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OptionalWPF"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Form Data Mahasiswa" Height="720" Width="570" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FF1B0E57">
+    <Grid>
+            <StackPanel Margin="50 20" Grid.ColumnSpan="2">
+            <Label Margin="25  0 0 29" Style="{StaticResource MaterialDesignLabel}" HorizontalAlignment="Center" FontSize="38" Foreground="White" FontFamily="Segoe UI Semibold">Form Data Mahasiswa</Label>
+            <Border Background="White" Margin="10 0 10 0" CornerRadius="5">
+                <StackPanel Margin="25">
+                    <TextBox x:Name="txtbox1" Margin="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="NIM"></TextBox>
+                    <TextBox x:Name="txtbox2" Margin="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Nama"></TextBox>
+                    <TextBox x:Name="txtbox3" Margin="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Program Studi"></TextBox>
+                    <TextBox x:Name="txtbox4" Margin="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Asal Kota"></TextBox>
+                    <TextBox x:Name="txtbox5" Margin="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Alamat Tinggal/Kos"></TextBox>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="resetbtn" Margin="40 40 30 7" Content="Reset" Background="#FF1B0E57" Click="resetbtn_Click"></Button>
+                        <Button x:Name="simpanbtn" Margin="40 40 30 7" Content="Simpan" Background="#FF1B0E57" Click="simpanbtn_Click"></Button>
+                    </StackPanel>
+                    <Label x:Name="msg_label" Margin="8" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignLabel}" Foreground="#FF056A38" FontFamily="Segoe UI Semibold" Content="Data berhasil disimpan !" Visibility="Hidden"/>
+                </StackPanel>
+            </Border>
+            <Label Margin="25 2 0 29" Style="{StaticResource MaterialDesignLabel}" HorizontalAlignment="Center" FontSize="10" Foreground="White">Copyright (R) Aris Saputra 2020</Label>
+        </StackPanel>
+    </Grid>
+</Window>
